@@ -1,0 +1,6 @@
+.env
+.venv
+.idea
+.vscode
+pipfile
+**/__pycache__/
