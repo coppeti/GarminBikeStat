@@ -45,3 +45,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background:url('../img/background_large.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(247, 255, 237, 0.55);
+}
