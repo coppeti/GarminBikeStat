@@ -46,10 +46,69 @@ table {
 	border-spacing: 0;
 }
 
+
+/********************
+GENERAL
+/********************/
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    color: #56445D;
+}
+
+h1, h2 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h2 {
+    font-size: 31px;
+}
+
+.box-title {
+    text-align: center;
+    color: #6DA34D;
+}
+
+.label {
+    margin-bottom: 7px;
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(109, 163, 77, 0.8);
+    border-radius: 5px;
+    background-color: #F2F8EB;
+}
+
+.button {
+    width: auto;
+    height: 40;
+    padding: 8px 50px;
+    border: 3px solid #6DA34D;
+    border-radius: 26px;
+    background-color: #548687;
+    color: #8FBC94;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 19.2px;
+
+}
+
+.field_error {
+    color: red;
+}
+
+
+/********************
+    MAIN PAGE
+/********************/
+
 .page {
     width: 100vw;
     height: 100vh;
     position: relative;
+    margin: 0;
     background:url('../img/background_large.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,3 +120,41 @@ table {
     inset: 0;
     background: rgba(247, 255, 237, 0.55);
 }
+
+.content {
+    position: relative;
+    width: auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/********************
+    LOGIN FORM
+/********************/
+
+.login-box {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    border: 1px solid #6DA34D;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, rgba(177, 202, 149, 0.5), rgba(197, 233, 155, 0.5));
+    box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.25);
+}
+
+.login-form {
+    margin: 40px 0;
+    width: 264px;
+}
+
+.form-btn {
+    text-align: center;
+}
+
