@@ -64,22 +64,35 @@ h2 {
     font-size: 31px;
 }
 
+a {
+    text-decoration: none;
+    color: #8FBC94;
+}
+
+a:hover {
+    color: #56445D;
+}
+
 .box-title {
     text-align: center;
     color: #6DA34D;
+    text-transform: uppercase;
 }
 
 .label {
-    margin-bottom: 7px;
+    margin: 10px 0 7px 0;
 }
 
 input {
     width: 100%;
-    height: 42px;
-    margin-bottom: 24px;
+    height: 35px;
+    margin-bottom: 10px;
+    padding: 0 5px;
     border: 1px solid rgba(109, 163, 77, 0.8);
     border-radius: 5px;
     background-color: #F2F8EB;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
 }
 
 .button {
@@ -139,7 +152,7 @@ input {
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 120px;
     border: 1px solid #6DA34D;
@@ -150,11 +163,21 @@ input {
 }
 
 .login-form {
-    margin: 40px 0;
+    /* margin-top: 50px;
+    margin-bottom: 20px; */
     width: 264px;
 }
 
 .form-btn {
     text-align: center;
+    margin: 10px  0;
 }
 
+
+/********************
+    SIGNIN FORM
+/********************/
+
+.warning {
+    color: #d62e69;
+}

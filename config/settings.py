@@ -2,6 +2,7 @@ from decouple import config
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -77,16 +78,26 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
+    #Custom password validators
+    {
+        "NAME": "config.validators.UppercaseValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": "config.validators.LowercaseValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME": "config.validators.NumberValidator",
     },
 ]
 
@@ -94,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "fr-CH"
+LANGUAGE_CODE = "en-GB"
 
 TIME_ZONE = "CET"
 
@@ -117,3 +128,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #Default user model for user authentication
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+
+#Redirect links for log in and log out
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "/"
